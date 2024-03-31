@@ -1,11 +1,4 @@
-public class ITR {
-  public static void main(String[] args) {
-    System.out.println(integerToRoman(3));
-    System.out.println(integerToRoman(4));
-    System.out.println(integerToRoman(9));
-    System.out.println(integerToRoman(58));
-    System.out.println(integerToRoman(1994));
-  }
+class Solution {
 
   static String integerToRoman(int num) {
     String result = "";

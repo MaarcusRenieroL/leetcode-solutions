@@ -1,10 +1,4 @@
-public class LSWRC {
-  public static void main(String[] args) {
-    String s = "abcabcbb";
-
-    System.out.println(lengthOfLongestSubstring(s));
-  }
-
+class Solution {
   static int lengthOfLongestSubstring(String s) {
     int result = 0, left = 0;
     int[] index = new int[128];
@@ -17,4 +11,5 @@ public class LSWRC {
 
     return result;
   }
+
 }

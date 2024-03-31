@@ -1,12 +1,4 @@
-public class RTI {
-  public static void main(String[] args) {
-    System.out.println(romanToInteger("III"));
-    System.out.println(romanToInteger("IV"));
-    System.out.println(romanToInteger("IX"));
-    System.out.println(romanToInteger("LVIII"));
-    System.out.println(romanToInteger("MCMXCIV"));
-  }
-
+class Solution {
   static int romanToInteger(String s) {
     int result = 0;
 
@@ -42,4 +34,5 @@ public class RTI {
         return 0;
     }
   }
+
 }

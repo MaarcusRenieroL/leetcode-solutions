@@ -1,8 +1,4 @@
-public class RI {
-  public static void main(String[] args) {
-    System.out.println(reverseInteger(-123));
-  }
-
+class Solution {
   static int reverseInteger(int n) {
     double result = 0;
     boolean isNegative = n < 0;
@@ -23,4 +19,5 @@ public class RI {
 
     return (int) result;
   }
+
 }

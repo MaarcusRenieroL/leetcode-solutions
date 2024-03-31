@@ -1,13 +1,4 @@
-import java.util.Arrays;
-
-public class MTSA {
-  public static void main(String[] args) {
-    int[] nums1 = { 1, 2 };
-    int[] nums2 = { 4, 3 };
-
-    System.out.println(findMedianSortedArrays(nums1, nums2));
-  }
-
+class Solution {
   static double findMedianSortedArrays(int[] nums1, int[] nums2) {
     int[] mergedList = new int[nums1.length + nums2.length];
 
@@ -19,19 +10,16 @@ public class MTSA {
       mergedList[i] = nums2[i - nums1.length];
     }
 
-    new MTSA().mergeSort(mergedList, 0, mergedList.length - 1);
-
-    System.out.println(Arrays.toString(mergedList));
+    mergeSort(mergedList, 0, mergedList.length - 1);
 
     if (mergedList.length % 2 == 0) {
       return (double) (mergedList[mergedList.length / 2] + mergedList[(mergedList.length / 2) - 1]) / 2;
     } else {
       return (double) mergedList[mergedList.length / 2];
     }
-
   }
 
-  void merge(int arr[], int p, int q, int r) {
+  static void merge(int arr[], int p, int q, int r) {
 
     int n1 = q - p + 1;
     int n2 = r - q;
@@ -73,7 +61,7 @@ public class MTSA {
     }
   }
 
-  void mergeSort(int arr[], int l, int r) {
+  static void mergeSort(int arr[], int l, int r) {
     if (l < r) {
 
       int m = (l + r) / 2;
@@ -84,4 +72,5 @@ public class MTSA {
       merge(arr, l, m, r);
     }
   }
+
 }
