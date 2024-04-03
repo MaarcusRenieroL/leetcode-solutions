@@ -1,16 +1,16 @@
 class Solution {
   public List<Boolean> kidsWithCandies(int[] c, int ec) {
-    List<Boolean> r = new ArrayList<>();
-    int m = 0;
+    List<Boolean> result = new ArrayList<>();
+    int m = c[0];
 
-    for (int k : c) {
-      m = (m > k) ? m : k;
+    for (int i = 1; i < c.length; i++) {
+      m = (m > c[i]) ? m : c[i];
     }
 
-    for (int k : c) {
-      r.add(k > m);
+    for (int i = 0; i < c.length; i++) {
+      result.add(c[i] + ec >= m);
     }
 
-    return r;
+    return result;
   }
 }
