@@ -6,10 +6,10 @@ class Solution {
     while (l <= r) {
       int m = l + (r - l) / 2;
 
-      if (arr[m] == target) {
+      if (nums[m] == target) {
         index = m;
         break;
-      } else if (arr[m] > target) {
+      } else if (nums[m] > target) {
         r = m - 1;
       } else {
         l = m + 1;
