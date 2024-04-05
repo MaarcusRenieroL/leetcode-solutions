@@ -1,12 +1,20 @@
 class Solution {
-  public int search(int[] nums, int target) {
+  public int singleNonDuplicate(int[] n) {
+    int l = 0, r = n.length - 1;
 
-    for (int i = 0; i < nums.length; i++) {
-      if (nums[i] == target) {
-        return i;
+    while (l < r) {
+      int m = (l + r) / 2;
+      if (m % 2 == 1) {
+        m--;
+      }
+
+      if (n[m] != n[m + 1]) {
+        r = m;
+      } else {
+        l = m + 2;
       }
     }
 
-    return -1;
+    return n[l];
   }
 }
